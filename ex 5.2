@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Reordering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box {
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: white;
+        }
+        .box-1 { background-color: #0d6efd; }
+        .box-2 { background-color: #198754; }
+        .box-3 { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <h2 class="text-center mb-4">Column Reordering</h2>
+        
+        <div class="row">
+            <!-- On mobile: appears first (order-1)
+                 On medium+: appears second (order-md-2) -->
+            <div class="col-md-6 order-1 order-md-2">
+                <div class="box box-1">Column 1 (Content)</div>
+            </div>
+            
+            <!-- On mobile: appears second (order-2)
+                 On medium+: appears first (order-md-1) -->
+            <div class="col-md-6 order-2 order-md-1">
+                <div class="box box-2">Column 2 (Sidebar)</div>
+            </div>
+            
+            <!-- Always appears last (no order class) -->
+            <div class="col-12">
+                <div class="box box-3">Footer (Always at bottom)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
