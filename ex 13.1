@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .stat-card {
+            border-radius: 10px;
+            color: white;
+            transition: transform 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        .sidebar {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <span class="fs-4 text-white">Dashboard</span>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="#">
+                                <i class="fas fa-tachometer-alt me-2"></i> Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">
+                                <i class="fas fa-chart-line me-2"></i> Analytics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">
+                                <i class="fas fa-shopping-cart me-2"></i> Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">
+                                <i class="fas fa-users me-2"></i> Customers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">
+                                <i class="fas fa-box-open me-2"></i> Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">
+                                <i class="fas fa-cog me-2"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <h1 class="h2 mb-4">Dashboard Overview</h1>
+                
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="stat-card p-4 bg-primary">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-uppercase">Total Revenue</h6>
+                                    <h2 class="mb-0">$24,780</h2>
+                                </div>
+                                <i class="fas fa-dollar-sign fa-3x opacity-50"></i>
+                            </div>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-primary">+12.5%</span>
+                                <span class="ms-2">vs last month</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="stat-card p-4 bg-success">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-uppercase">New Orders</h6>
+                                    <h2 class="mb-0">1,245</h2>
+                                </div>
+                                <i class="fas fa-shopping-cart fa-3x opacity-50"></i>
+                            </div>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-success">+8.3%</span>
+                                <span class="ms-2">vs last month</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="stat-card p-4 bg-warning text-dark">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-uppercase">Active Users</h6>
+                                    <h2 class="mb-0">3,287</h2>
+                                </div>
+                                <i class="fas fa-users fa-3x opacity-50"></i>
+                            </div>
+                            <div class="mt-3">
+                                <span class="badge bg-dark text-warning">+5.2%</span>
+                                <span class="ms-2">vs last month</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="stat-card p-4 bg-danger">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-uppercase">Bounce Rate</h6>
+                                    <h2 class="mb-0">23.8%</h2>
+                                </div>
+                                <i class="fas fa-chart-pie fa-3x opacity-50"></i>
+                            </div>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-danger">-1.5%</span>
+                                <span class="ms-2">vs last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charts and Tables -->
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">Sales Overview</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-placeholder" style="height: 300px;">
+                                    <!-- Chart would go here -->
+                                    <div class="d-flex align-items-center justify-content-center h-100 text-muted">
+                                        Sales chart visualization
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="mb-0">Traffic Sources</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-placeholder" style="height: 300px;">
+                                    <!-- Chart would go here -->
+                                    <div class="d-flex align-items-center justify-content-center h-100 text-muted">
+                                        Traffic sources chart
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="card mt-4">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Recent Activity</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1 text-primary">New order #1234</h6>
+                                    <small class="text-muted">15 mins ago</small>
+                                </div>
+                                <p class="mb-1">Customer: John Smith - Total: $245.99</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1 text-success">Payment received</h6>
+                                    <small class="text-muted">1 hour ago</small>
+                                </div>
+                                <p class="mb-1">Order #1233 - Amount: $189.50</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1 text-warning">New customer registered</h6>
+                                    <small class="text-muted">3 hours ago</small>
+                                </div>
+                                <p class="mb-1">Sarah Johnson - Premium plan</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
