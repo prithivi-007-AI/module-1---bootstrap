@@ -1,0 +1,23 @@
+npm install bootstrap @popperjs/core
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Local Example</title>
+    <!-- Bootstrap 5 CSS from local files -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Hello Bootstrap 5!</h1>
+        <p class="text-center">This page is using locally installed Bootstrap 5 files.</p>
+        <button class="btn btn-primary d-block mx-auto">Sample Button</button>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper from local files -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
