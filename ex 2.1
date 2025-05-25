@@ -1,1 +1,95 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Directory Structure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .folder {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .file {
+            margin-left: 20px;
+            color: #495057;
+        }
+        .purpose {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bootstrap Directory Structure</h1>
+    
+    <div class="folder">
+        <h2>bootstrap/</h2>
+        <p>This is the root directory of the downloaded Bootstrap package.</p>
+        
+        <div class="folder">
+            <h3>css/</h3>
+            <div class="file">bootstrap.min.css</div>
+            <div class="file">bootstrap.css</div>
+            <div class="file">bootstrap-grid.min.css</div>
+            <div class="file">bootstrap-grid.css</div>
+            <div class="file">bootstrap-utilities.min.css</div>
+            <div class="file">bootstrap-utilities.css</div>
+            <div class="file">bootstrap-reboot.min.css</div>
+            <div class="file">bootstrap-reboot.css</div>
+            
+            <div class="purpose">
+                <strong>Purpose:</strong> Contains all CSS files for Bootstrap. The minified versions (.min.css) are for production use, 
+                while the unminified versions are for development. The grid, utilities, and reboot files are 
+                optional partial distributions.
+            </div>
+        </div>
+        
+        <div class="folder">
+            <h3>js/</h3>
+            <div class="file">bootstrap.bundle.min.js</div>
+            <div class="file">bootstrap.bundle.js</div>
+            <div class="file">bootstrap.min.js</div>
+            <div class="file">bootstrap.js</div>
+            
+            <div class="purpose">
+                <strong>Purpose:</strong> Contains all JavaScript files. The bundle versions include Popper.js (required for dropdowns, 
+                popovers, and tooltips). The non-bundle versions require Popper.js to be included separately.
+            </div>
+        </div>
+        
+        <div class="folder">
+            <h3>icons/</h3>
+            <div class="file">bootstrap-icons.css</div>
+            <div class="file">fonts/ (contains icon font files)</div>
+            
+            <div class="purpose">
+                <strong>Purpose:</strong> Contains Bootstrap Icons (if included). This is a separate icon library that can be used with 
+                Bootstrap. It provides scalable vector icons that can be easily customized with CSS.
+            </div>
+        </div>
+    </div>
+    
+    <h2>Typical Project Structure When Using Downloaded Files</h2>
+    <pre>
+project-root/
+├── css/
+│   └── bootstrap.min.css       # Minified Bootstrap CSS
+├── js/
+│   ├── bootstrap.bundle.min.js # Minified Bootstrap JS with Popper
+│   └── popper.min.js           # Only needed if not using bundle version
+└── index.html                  # Your HTML file
+    </pre>
+</body>
+</html>
