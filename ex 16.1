@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 16.1 - Fixed Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin-bottom: 60px; /* Space for fixed footer */
+    }
+  </style>
+</head>
+<body>
+
+  <main class="p-4">
+    <h2>Exercise 16.1: Fixed Footer</h2>
+    <p>The footer below stays fixed at the bottom of the viewport.</p>
+  </main>
+
+  <footer class="position-fixed bottom-0 w-100 bg-dark text-white text-center p-3">
+    Fixed footer using <code>position-fixed</code> and <code>bottom-0</code>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
