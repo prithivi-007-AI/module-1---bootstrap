@@ -1,0 +1,44 @@
+//Initialize npm and install Bootstrap & Sass
+
+mkdir bootstrap-sass-custom
+cd bootstrap-sass-custom
+npm init -y
+npm install bootstrap sass
+
+//Create SCSS files
+
+// scss/custom.scss
+
+// Import custom variables (even if empty for now)
+@import "variables";
+
+// Import Bootstrap source
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//Add build script to package.json
+
+"scripts": {
+  "build-css": "sass scss/custom.scss dist/css/bootstrap.css"
+}
+
+//Build the CSS
+
+npm run build-css
+
+//Create the HTML file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 with Sass</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.css" />
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-primary">Hello, Bootstrap with Sass!</h1>
+    <p class="lead">This is a custom build using Bootstrap 5 and Sass via npm.</p>
+    <button class="btn btn-primary">Primary Button</button>
+  </div>
+</body>
+</html>
