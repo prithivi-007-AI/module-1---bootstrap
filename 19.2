@@ -1,0 +1,44 @@
+//Initialize npm and install Bootstrap & Sass
+
+mkdir bootstrap-sass-custom
+cd bootstrap-sass-custom
+npm init -y
+npm install bootstrap sass
+
+//SCSS file coustomized
+// scss/_variables.scss
+
+// Customize Bootstrap theme variables
+$primary: #ff5722;          // Deep orange as new primary color
+$border-radius: 1.5rem;     // Large border radius
+
+// scss/custom.scss
+
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+"scripts": {
+  "build-css": "sass scss/custom.scss dist/css/bootstrap.css"
+}
+
+npm run build-css
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 Custom Sass</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.css" />
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-primary">Customized Bootstrap</h1>
+    <p class="lead">This uses a deep orange primary and rounded corners.</p>
+    <button class="btn btn-primary">Primary Button</button>
+    <div class="card p-3 mt-4">
+      <p>This card will have rounded corners too!</p>
+    </div>
+  </div>
+</body>
+</html>
